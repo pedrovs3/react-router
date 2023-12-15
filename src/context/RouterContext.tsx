@@ -32,4 +32,21 @@ React.FC<RouterContextProviderProps> = ({ children }) => {
   );
 };
 
-export const useRouterContext = () => React.useContext(RouterContext);
+export const useRouterContext = () => {
+  const context = React.useContext(RouterContext);
+
+  const { path, setLocation, queryParams } = context ?? {};
+
+  const navigate = (path: string, data?: object) => {
+    window.history.pushState(null, '', path);
+    setLocation(path);
+    return data;
+  };
+
+  return {
+    path,
+    setLocation,
+    queryParams,
+    navigate,
+  };
+};

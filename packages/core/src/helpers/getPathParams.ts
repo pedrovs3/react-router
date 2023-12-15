@@ -1,10 +1,10 @@
-export const getPathParams = (path: string, currentPath: string) => {
-  const pathArray = path.split('/');
+export const getPathParams = (pathRoute: string, currentPath: string) => {
+  const pathRouteArray = pathRoute.split('/');
   const currentPathArray = currentPath.split('/');
 
   const params: { [key: string]: string } = {};
 
-  pathArray.forEach((pathItem, index) => {
+  pathRouteArray.forEach((pathItem, index) => {
     if (pathItem.startsWith(':')) {
       const key = pathItem.replace(':', '');
       params[key] = currentPathArray[index];

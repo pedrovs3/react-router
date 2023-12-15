@@ -23,7 +23,7 @@ npm install @pedrovs3/react-router
 Aqui está um exemplo básico de como usar esta biblioteca:
 
 ```typescriptreact
-import { Router, Route } from 'sua-biblioteca-de-roteamento';
+import { Router, Route } from '@pedrovs3/react-router';
 
 const App = () => (
   <Router>

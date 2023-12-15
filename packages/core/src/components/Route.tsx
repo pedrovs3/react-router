@@ -1,24 +1,28 @@
 import React from 'react';
 import { useRouterContext } from '../context';
 import { getPathParams } from '../helpers';
+import { NotFound } from '.';
 
 interface RouteProps {
   path: string;
-  component: React.ComponentType<any>;
+  component: React.ComponentType<IComponentProps>;
+  notFoundPage?: React.ComponentType<any>;
 }
 
-export const Route: React.FC<RouteProps> = ({ path, component: Component }) => {
+interface IComponentProps {
+  pathParams: object;
+  queryParams: object;
+}
+
+export const Route: React.FC<RouteProps> = ({ path, component: Component, notFoundPage: NotFoundPage }) => {
   const { path: currentPath, queryParams } = useRouterContext();
   const pathParams = getPathParams(path, currentPath);
 
-  const isMatch = currentPath.startsWith(path);
+  const isMatch = path === "*" ? true : currentPath.startsWith(path);
 
-  return isMatch
-    ? (
-      <Component
-        pathParams={pathParams}
-        queryParams={queryParams}
-      />
-    )
-    : null;
+  if (!isMatch) return null;
+
+  if (path === "*") return NotFoundPage ? <NotFoundPage /> : <NotFound />;
+
+  return <Component pathParams={pathParams} queryParams={queryParams} />;
 };

@@ -11,6 +11,9 @@
     "version-packages": "changeset version",
     "release": "turbo run build && changeset publish"
   },
+  "jest": {
+    "testEnvironment": "jsdom"
+  },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
     "typescript": "^5.3.3",

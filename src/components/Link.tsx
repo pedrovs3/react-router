@@ -1,15 +1,18 @@
 import React from 'react';
+import { useRouterContext } from '../context';
 
 interface LinkProps {
   to: string;
   children: React.ReactNode;
 }
 
-const Link: React.FC<LinkProps> = ({ to, children }) => {
+export const Link: React.FC<LinkProps> = ({ to, children }) => {
+  const { setLocation } = useRouterContext();
+
   const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
     window.history.pushState(null, '', to);
-    window.dispatchEvent(new PopStateEvent('popstate'));
+    setLocation(to);
   };
 
   return (
@@ -18,5 +21,3 @@ const Link: React.FC<LinkProps> = ({ to, children }) => {
     </a>
   );
 };
-
-export default Link;

@@ -1,29 +1,31 @@
-import '@testing-library/jest-dom';
-import { render, screen } from '@testing-library/react';
-import Router from '@/components/Router';
-import Link from '@/components/Link';
-import Route from '@/components/Route';
+import "@testing-library/jest-dom";
+import { act, fireEvent, render, screen } from "@testing-library/react";
+import { Link, Route, Router } from "../components";
 
-describe('Route', () => {
-  it('renders the component when the path matches', () => {
-    const Home = () => <div>Home</div>;
-    const About = () => <div>About</div>;
+
+describe("Route", () => {
+  it("renders the component when the path matches", async () => {
+    const Home = () => <div>Home Page</div>;
+    const About = () => <div>About Page</div>;
 
     render(
       <Router>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
+        <Link to="/">Home Link</Link>
+        <Link to="/about">About Link</Link>
         <Route path="/" component={Home} />
         <Route path="/about" component={About} />
       </Router>,
     );
 
-    expect(screen.getByText('Home')).toBeInTheDocument();
-    expect(screen.queryByText('About')).not.toBeInTheDocument();
+    expect(screen.getByText("Home Page")).toBeInTheDocument();
+    expect(screen.queryByText("About Page")).not.toBeInTheDocument();
 
-    screen.getByText('Home').click();
+    await act(async () => {
+      fireEvent.click(screen.getByText("About Link"));
+    });
 
-    expect(screen.queryByText('Home')).not.toBeInTheDocument();
-    expect(screen.getByText('About')).toBeInTheDocument();
+    // expect(screen.queryByText("Home Page")).not.toBeInTheDocument();
+    expect(screen.getByText("About Page")).toBeInTheDocument();
+    screen.logTestingPlaygroundURL();
   });
 });

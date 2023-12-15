@@ -1,3 +1,3 @@
-export * as Link from './Link';
-export * as Route from './Route';
-export * as Router from './Router';
+export * from './Link';
+export * from './Route';
+export * from './Router';

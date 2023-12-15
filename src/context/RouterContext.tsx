@@ -1,8 +1,10 @@
 import React from 'react';
+import { getQueryParams } from '../helpers';
 
 interface RouterContextProps {
-  location: Location;
-  setLocation: React.Dispatch<React.SetStateAction<Location>>;
+  path: string;
+  setLocation: React.Dispatch<React.SetStateAction<string>>;
+  queryParams: object;
 }
 
 interface RouterContextProviderProps {
@@ -10,17 +12,21 @@ interface RouterContextProviderProps {
 }
 
 const RouterContext = React.createContext<RouterContextProps>({
-  location: window.location, // TODO: verify if this prop don't break the app
+  path: '',
   setLocation: () => {
   },
+  queryParams: {},
 });
 
 export const RouterContextProvider:
 React.FC<RouterContextProviderProps> = ({ children }) => {
-  const [location, setLocation] = React.useState<Location>(window.location);
+  const [location, setLocation] = React.useState<string>(window.location.pathname || '/');
+  const queryParams = getQueryParams(window.location.href);
+
+  window.onpopstate = () => setLocation(window.location.pathname);
 
   return (
-    <RouterContext.Provider value={{ location, setLocation }}>
+    <RouterContext.Provider value={{ path: location, setLocation, queryParams }}>
       {children}
     </RouterContext.Provider>
   );

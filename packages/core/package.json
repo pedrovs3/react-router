@@ -1,0 +1,50 @@
+{
+  "name": "@pedrovs3/react-router",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "module": "./dist/index.mjs",
+  "scripts": {
+    "test": "jest --watchAll --coverage",
+    "build": "tsup src/index.ts --format cjs,esm --dts --minify --clean",
+    "npm:link": "npm run build && npm link",
+    "npm:unlink": "npm unlink && npm unlink @pedrovs3-testes/react-router",
+    "npm:publish": "npm run build && npm publish --access public"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ],
+  "keywords": [
+    "react",
+    "router"
+  ],
+  "jest": {
+    "testEnvironment": "jsdom"
+  },
+  "author": "pedrovs3",
+  "license": "MIT",
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "dependencies": {
+    "@jest/globals": "^29.7.0",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "react-app": "^1.1.2",
+    "tsup": "^8.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

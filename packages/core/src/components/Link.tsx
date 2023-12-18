@@ -1,5 +1,5 @@
 import React from 'react';
-import { useRouterContext } from '../context';
+import { useRouter } from '../context';
 
 interface LinkProps {
   to: string;
@@ -7,7 +7,7 @@ interface LinkProps {
 }
 
 export const Link: React.FC<LinkProps> = ({ to, children }) => {
-  const { setLocation } = useRouterContext();
+  const { setLocation } = useRouter();
 
   const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();

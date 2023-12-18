@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { getQueryParams } from '../helpers';
 
 interface RouterContextProps {
@@ -27,42 +27,42 @@ export const RouterContextProvider:
 React.FC<RouterContextProviderProps> = ({ children }) => {
   const [location, setLocation] = React.useState<string>(window.location.pathname || '/');
   const [navigationData, setNavigationData] = React.useState<object>({});
-  const queryParams = getQueryParams(window.location.href);
+  const queryParams = useMemo(() => getQueryParams(window.location.href), [location]);
 
   window.onpopstate = () => setLocation(window.location.pathname);
 
   return (
-    <RouterContext.Provider value={{ path: location, setLocation, queryParams, navigationData, setNavigationData }}>
+    <RouterContext.Provider value={{
+      path: location, setLocation, queryParams, navigationData, setNavigationData,
+    }}
+    >
       {children}
     </RouterContext.Provider>
   );
 };
 
-export const useRouterContext = () => {
+export const useRouter = () => {
   const context = React.useContext(RouterContext);
 
-  const { path, setLocation, queryParams, navigationData, setNavigationData } = context ?? {};
+  const {
+    path, setLocation, queryParams, navigationData, setNavigationData,
+  } = context ?? {};
 
   const navigate = (path: string, data?: object) => {
     window.history.pushState(null, '', path);
     setLocation(path);
     setNavigationData(data ?? {});
-    return;
   };
 
   const goBack = () => {
     window.history.back();
-    return;
-  }
+  };
 
   const goForward = () => {
     window.history.forward();
-    return;
-  }
+  };
 
-  const getNavigationData = () => {
-    return navigationData;
-  }
+  const getNavigationData = () => navigationData;
 
   return {
     path,

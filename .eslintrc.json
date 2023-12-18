@@ -11,23 +11,16 @@
     "plugin:react-hooks/recommended"
   ],
   "parser": "@typescript-eslint/parser",
-  "ignorePatterns": [
-    "dist",
-    "node_modules",
-    "src/**/*.test.tsx"
-  ],
+  "ignorePatterns": ["dist", "node_modules", "*.test.tsx", "*.test.ts"],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
     },
     "ecmaVersion": "latest",
     "sourceType": "module",
-    "project": "./tsconfig.json"
+    "project": "./packages/*/tsconfig.json"
   },
-  "plugins": [
-    "react",
-    "@typescript-eslint"
-  ],
+  "plugins": ["react", "@typescript-eslint"],
   "rules": {
     "react/jsx-no-useless-fragment": "off",
     "react/function-component-definition": "off",
@@ -36,6 +29,7 @@
     "import/prefer-default-export": "off",
     "import/extensions": "off",
     "react/require-default-props": "off",
-    "@typescript-eslint/no-shadow": "off"
+    "@typescript-eslint/no-shadow": "off",
+    "no-nested-ternary": "off"
   }
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { RouterContextProvider } from '../context';
+import { Switch } from './Switch';
 
 interface RouterProps {
   children: React.ReactNode;
@@ -7,6 +8,8 @@ interface RouterProps {
 
 export const Router: React.FC<RouterProps> = ({ children }) => (
   <RouterContextProvider>
-    {children}
+    <Switch>
+      {children}
+    </Switch>
   </RouterContextProvider>
 );

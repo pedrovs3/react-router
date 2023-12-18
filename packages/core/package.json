@@ -24,21 +24,13 @@
   },
   "author": "pedrovs3",
   "license": "MIT",
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
-  "dependencies": {
-    "@jest/globals": "^29.7.0",
-    "typescript": "^5.3.3"
-  },
   "devDependencies": {
+    "@jest/globals": "^29.7.0",
+    "typescript": "^5.3.3",
     "react-app": "^1.1.2",
     "tsup": "^8.0.1",
     "react": "^18.2.0",

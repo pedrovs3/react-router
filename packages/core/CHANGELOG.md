@@ -1,5 +1,11 @@
 # @pedrovs3/react-router
 
+## 1.3.1
+
+### Patch Changes
+
+- add hooks to router
+
 ## 1.3.0
 
 ### Minor Changes

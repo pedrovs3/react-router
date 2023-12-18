@@ -1,7 +1,7 @@
 import React from 'react';
-import { useRouter } from '../context';
 import { matchPath } from '../helpers';
 import { NotFound } from './pages';
+import { usePath } from "../hooks";
 
 interface ISwitchProps {
   children: React.ReactNode;
@@ -9,7 +9,7 @@ interface ISwitchProps {
 }
 
 export const Switch: React.FC<ISwitchProps> = ({ children, path: SwitchPath = '' }) => {
-  const { path: currentPath } = useRouter();
+  const currentPath = usePath();
 
   let pathParams = {};
   const validChildren = React.Children.toArray(children).filter((child) => {

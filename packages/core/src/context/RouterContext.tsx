@@ -48,29 +48,11 @@ export const useRouter = () => {
     path, setLocation, queryParams, navigationData, setNavigationData,
   } = context ?? {};
 
-  const navigate = (path: string, data?: object) => {
-    window.history.pushState(null, '', path);
-    setLocation(path);
-    setNavigationData(data ?? {});
-  };
-
-  const goBack = () => {
-    window.history.back();
-  };
-
-  const goForward = () => {
-    window.history.forward();
-  };
-
-  const getNavigationData = () => navigationData;
-
   return {
     path,
     setLocation,
     queryParams,
-    navigate,
-    getNavigationData,
-    goBack,
-    goForward,
+    navigationData,
+    setNavigationData
   };
 };

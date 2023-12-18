@@ -1,5 +1,6 @@
 import React from 'react';
 import { useRouter } from '../context';
+import { useNavigate } from "../hooks";
 
 interface IRedirectProps {
   to: string;
@@ -7,7 +8,7 @@ interface IRedirectProps {
 }
 
 export const Redirect: React.FC<IRedirectProps> = ({ to, data }) => {
-  const { navigate } = useRouter();
+  const { navigate } = useNavigate();
   React.useEffect(() => {
     navigate(to, data);
   }, [data, navigate, to]);

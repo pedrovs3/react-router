@@ -2,6 +2,7 @@ import React from 'react';
 import { useRouter } from '../context';
 import { getPathParams } from '../helpers';
 import { NotFound } from './pages';
+import { usePath, useQueryParams } from "../hooks";
 
 interface RouteProps {
   path: string;
@@ -14,9 +15,9 @@ interface IComponentProps {
 }
 
 export const Route: React.FC<RouteProps> = ({ path, component: Component }) => {
-  const { path: currentPath, queryParams } = useRouter();
+  const currentPath = usePath();
+  const queryParams = useQueryParams();
   const pathParams = getPathParams(path, currentPath);
-
   const isMatch = path === '*' ? true : pathParams !== null;
 
   if (!isMatch) return null;

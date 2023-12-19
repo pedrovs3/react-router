@@ -1,5 +1,11 @@
 # @pedrovs3/react-router
 
+## 1.4.0
+
+### Minor Changes
+
+- add guarded routes in route component
+
 ## 1.3.1
 
 ### Patch Changes

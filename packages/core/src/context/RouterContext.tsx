@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import { getQueryParams } from '../helpers';
 
 interface RouterContextProps {
@@ -27,7 +27,7 @@ export const RouterContextProvider:
 React.FC<RouterContextProviderProps> = ({ children }) => {
   const [location, setLocation] = React.useState<string>(window.location.pathname || '/');
   const [navigationData, setNavigationData] = React.useState<object>({});
-  const queryParams = useMemo(() => getQueryParams(window.location.href), [location]);
+  const queryParams = React.useMemo(() => getQueryParams(window.location.href), [location]);
 
   window.onpopstate = () => setLocation(window.location.pathname);
 
@@ -53,6 +53,6 @@ export const useRouter = () => {
     setLocation,
     queryParams,
     navigationData,
-    setNavigationData
+    setNavigationData,
   };
 };

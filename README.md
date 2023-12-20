@@ -31,11 +31,23 @@ Aqui está um exemplo básico de como usar esta biblioteca:
 
 ```typescriptreact
 import { Router, Route } from '@pedrovs3/react-router';
+import { lazy } from 'react';
+
+// Example with lazy loading
+const About = lazy(() => import('./About'));
 
 const App = () => (
   <Router>
     <Route path="/home" component={Home} />
-    <Route path="/about" component={About} metadata={{ title: "About page" }} />
+    <Route 
+      path="/about" 
+      component={(props) => (
+         <React.Suspense fallback={<div>Loading...</div>}>
+          <About {...props} />
+         </React.Suspense>)
+     } 
+      metadata={{ title: "About page" }} 
+    />
     <Route path="/user/:id" component={User} />
     <Route path="*" component={NotFound} />
   </Router>

@@ -1,5 +1,11 @@
 # @pedrovs3/react-router
 
+## 1.4.2
+
+### Patch Changes
+
+- feat: implements lazy loading on route component
+
 ## 1.4.1
 
 ### Patch Changes

@@ -15,6 +15,7 @@ na URL.
 - **Guarded routes**: Defina rotas que só podem ser acessadas se o usuário estiver autenticado.
 - **Hooks**: Possui hooks para acessar o histórico de navegação e o contexto do roteador.
 - **Metadata**: Defina metadados para suas rotas, como por exemplo, título da página e descrição para melhorar o `SEO`.
+- **Lazy loading**: Suporte para carregamento assíncrono de componentes.
 - **Suporte ao TypeScript**: Todos os componentes e hooks são totalmente tipados.
 
 ## Instalação
@@ -41,11 +42,7 @@ const App = () => (
     <Route path="/home" component={Home} />
     <Route 
       path="/about" 
-      component={(props) => (
-         <React.Suspense fallback={<div>Loading...</div>}>
-          <About {...props} />
-         </React.Suspense>)
-     } 
+      component={About}
       metadata={{ title: "About page" }} 
     />
     <Route path="/user/:id" component={User} />

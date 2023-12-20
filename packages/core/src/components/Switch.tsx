@@ -1,7 +1,7 @@
 import React from 'react';
 import { matchPath } from '../helpers';
 import { NotFound } from './pages';
-import { usePath } from "../hooks";
+import { usePath } from '../hooks';
 
 interface ISwitchProps {
   children: React.ReactNode;

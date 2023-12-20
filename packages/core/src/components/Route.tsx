@@ -6,11 +6,17 @@ import { Redirect } from './Redirect';
 
 interface RouteProps {
   path: string;
-  component: React.ComponentType<IComponentProps>;
+  component: RouteComponent;
   metadata?: IMetaData;
   guard?: () => boolean;
   redirectTo?: string;
 }
+
+type RouteComponent =
+  React.ComponentType<IComponentProps>
+  | React.ExoticComponent<React.CustomComponentPropsWithRef<() => JSX.Element>> & {
+    readonly _result: () => Element
+  };
 
 interface IMetaData {
   title: string;
@@ -52,5 +58,20 @@ export const Route: React.FC<RouteProps> = ({
 
   if (path === '*') return <NotFound />;
 
-  return <Component pathParams={pathParams} queryParams={queryParams} />;
+  return (
+    typeof Component !== 'function' ? (
+      <React.Suspense fallback={<div>Loading...</div>}>
+        {/* @ts-ignore */}
+        <Component
+          pathParams={pathParams}
+          queryParams={queryParams}
+        />
+      </React.Suspense>
+    ) : (
+      <Component
+        pathParams={pathParams}
+        queryParams={queryParams}
+      />
+    )
+  );
 };

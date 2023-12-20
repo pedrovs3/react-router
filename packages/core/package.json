@@ -1,6 +1,6 @@
 {
   "name": "@pedrovs3/react-router",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "This is a simple, lightweight, and flexible routing library for React applications. It provides a set of components and hooks to handle routing in your application, including support for dynamic routes with path parameters.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -21,6 +21,7 @@
     "react",
     "router"
   ],
+  "repository": "https://github.com/pedrovs3/react-router",
   "jest": {
     "testEnvironment": "jsdom"
   },

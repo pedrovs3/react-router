@@ -1,5 +1,11 @@
 # @pedrovs3/react-router
 
+## 1.4.1
+
+### Patch Changes
+
+- add metadata props to route component
+
 ## 1.4.0
 
 ### Minor Changes

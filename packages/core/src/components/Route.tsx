@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { getPathParams } from '../helpers';
 import { NotFound } from './pages';
 import { usePath, useQueryParams } from '../hooks';
@@ -6,7 +6,7 @@ import { Redirect } from './Redirect';
 
 interface RouteProps {
   path: string;
-  component: React.ComponentType<IComponentProps>;
+  component: Promise<{ default: React.ComponentType<IComponentProps> }>;
   metadata?: IMetaData;
   guard?: () => boolean;
   redirectTo?: string;
@@ -24,7 +24,7 @@ interface IComponentProps {
 
 export const Route: React.FC<RouteProps> = ({
   path,
-  component: Component,
+  component,
   guard,
   redirectTo,
   metadata = {
@@ -32,6 +32,7 @@ export const Route: React.FC<RouteProps> = ({
     description: document.querySelector('meta[name="description"]')?.getAttribute('content') || 'React App',
   },
 }) => {
+  const Component = useMemo(() => React.lazy(() => component), [component]);
   const currentPath = usePath();
   const queryParams = useQueryParams();
   const pathParams = getPathParams(path, currentPath);
@@ -52,5 +53,9 @@ export const Route: React.FC<RouteProps> = ({
 
   if (path === '*') return <NotFound />;
 
-  return <Component pathParams={pathParams} queryParams={queryParams} />;
+  return (
+    <React.Suspense fallback={<div>Loading...</div>}>
+      <Component pathParams={pathParams} queryParams={queryParams} />
+    </React.Suspense>
+  );
 };

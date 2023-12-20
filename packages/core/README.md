@@ -14,6 +14,7 @@ na URL.
 - **Página 404**: Defina uma página 404 personalizada que será exibida quando nenhuma rota corresponder.
 - **Guarded routes**: Defina rotas que só podem ser acessadas se o usuário estiver autenticado.
 - **Hooks**: Possui hooks para acessar o histórico de navegação e o contexto do roteador.
+- **Metadata**: Defina metadados para suas rotas, como por exemplo, título da página e descrição para melhorar o `SEO`.
 - **Suporte ao TypeScript**: Todos os componentes e hooks são totalmente tipados.
 
 ## Instalação
@@ -34,7 +35,7 @@ import { Router, Route } from '@pedrovs3/react-router';
 const App = () => (
   <Router>
     <Route path="/home" component={Home} />
-    <Route path="/about" component={About} />
+    <Route path="/about" component={About} metadata={{ title: "About page" }} />
     <Route path="/user/:id" component={User} />
     <Route path="*" component={NotFound} />
   </Router>
@@ -48,8 +49,6 @@ prop `pathParams` com o id da URL.
 
 Esta biblioteca foi criada para ser uma alternativa simples e leve ao React Router. Ela não possui muitos recursos,
 mas é fácil de usar e tem um tamanho menor do que o React Router.
-
----
 
 ## Autor
 

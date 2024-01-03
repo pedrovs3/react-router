@@ -1,5 +1,11 @@
 # @pedrovs3/react-router
 
+## 1.4.3
+
+### Patch Changes
+
+- rename guard prop to middleware in route component
+
 ## 1.4.2
 
 ### Patch Changes

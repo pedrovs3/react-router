@@ -8,7 +8,7 @@ interface RouteProps {
   path: string;
   component: RouteComponent;
   metadata?: IMetaData;
-  guard?: () => boolean;
+  middleware?: () => boolean;
   redirectTo?: string;
 }
 
@@ -31,7 +31,7 @@ interface IComponentProps {
 export const Route: React.FC<RouteProps> = ({
   path,
   component: Component,
-  guard,
+  middleware,
   redirectTo,
   metadata = {
     title: document.title || 'React App',
@@ -52,7 +52,7 @@ export const Route: React.FC<RouteProps> = ({
     }
   }, [metadata]);
 
-  if (guard && !guard()) return <Redirect to={redirectTo || '/login'} />;
+  if (middleware && !middleware()) return <Redirect to={redirectTo || '/login'} />;
 
   if (!isMatch) return null;
 

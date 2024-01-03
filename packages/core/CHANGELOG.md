@@ -1,5 +1,11 @@
 # @pedrovs3/react-router
 
+## 1.4.4
+
+### Patch Changes
+
+- add styles on not found page
+
 ## 1.4.3
 
 ### Patch Changes

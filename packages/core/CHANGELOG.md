@@ -1,5 +1,11 @@
 # @pedrovs3/react-router
 
+## 1.4.5
+
+### Patch Changes
+
+- update readme and docs
+
 ## 1.4.4
 
 ### Patch Changes

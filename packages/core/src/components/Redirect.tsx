@@ -1,6 +1,5 @@
 import React from 'react';
-import { useRouter } from '../context';
-import { useNavigate } from "../hooks";
+import { useNavigate } from '../hooks';
 
 interface IRedirectProps {
   to: string;

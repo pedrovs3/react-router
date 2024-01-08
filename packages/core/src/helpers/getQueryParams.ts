@@ -1,11 +1,15 @@
+interface IQueryParams {
+	[key: string]: number | string | boolean | null | undefined;
+}
+
 export const getQueryParams = (url: string) => {
-  const [_, urlFormatted] = url.split('?');
-  const queryParams = new URLSearchParams(urlFormatted);
-  const params: any = {};
+	const [_, urlFormatted] = url.split("?");
+	const queryParams = new URLSearchParams(urlFormatted);
+	const params: IQueryParams = {};
 
-  queryParams.forEach((value, key) => {
-    params[key] = value;
-  });
+	queryParams.forEach((value, key) => {
+		params[key] = value;
+	});
 
-  return params;
+	return params as IQueryParams;
 };

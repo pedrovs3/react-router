@@ -9,28 +9,24 @@
     "npm:link": "npm run build && npm link",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "turbo run build && changeset publish"
+    "release": "turbo run build && changeset publish",
+    "biome:check": "pnpm dlx @biomejs/biome check --apply packages/"
   },
   "jest": {
     "testEnvironment": "jsdom"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.27.1",
-    "typescript": "^5.3.3",
     "@babel/preset-env": "^7.23.6",
     "@babel/preset-react": "^7.23.3",
+    "@biomejs/biome": "1.5.0",
+    "@changesets/cli": "^2.27.1",
     "@testing-library/jest-dom": "^6.1.5",
     "@testing-library/react": "^14.1.2",
     "@types/jest": "^29.5.11",
     "@types/react": "^18.2.45",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-airbnb-typescript": "^17.1.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.0.1",
-    "eslint-plugin-react-hooks": "^4.6.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
-    "prettier": "^3.1.1"
+    "typescript": "^5.3.3"
   },
   "dependencies": {
     "turbo": "^1.11.2"

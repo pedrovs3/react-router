@@ -1,29 +1,29 @@
 export const matchPath = (currentPath: string, pathOrigin: string) => {
-  const currentPathArray = currentPath.split('?')[0].split('/');
-  const pathOriginArray = pathOrigin.split('/');
+	const currentPathArray = currentPath.split("?")[0].split("/");
+	const pathOriginArray = pathOrigin.split("/");
 
-  if (currentPathArray.length !== pathOriginArray.length) {
-    return false;
-  }
+	if (currentPathArray.length !== pathOriginArray.length) {
+		return false;
+	}
 
-  const params: { [key: string]: string } = {};
+	const params: { [key: string]: string } = {};
 
-  const match = pathOriginArray.every((path, index) => {
-    if (path === '*') {
-      return true;
-    }
+	const match = pathOriginArray.every((path, index) => {
+		if (path === "*") {
+			return true;
+		}
 
-    if (path === '**') {
-      return true;
-    }
+		if (path === "**") {
+			return true;
+		}
 
-    if (path.startsWith(':')) {
-      params[path.slice(1)] = currentPathArray[index];
-      return true;
-    }
+		if (path.startsWith(":")) {
+			params[path.slice(1)] = currentPathArray[index];
+			return true;
+		}
 
-    return path === currentPathArray[index];
-  });
+		return path === currentPathArray[index];
+	});
 
-  return match ? params : false;
+	return match ? params : false;
 };

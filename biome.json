@@ -1,0 +1,48 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.5.0/schema.json",
+	"organizeImports": {
+		"enabled": true
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"a11y": {
+				"useValidAnchor": "off"
+			}
+		}
+	},
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "tab",
+		"indentWidth": 2,
+		"lineWidth": 80,
+		"lineEnding": "lf"
+	},
+	"files": {
+		"include": [
+			"packages/**/*.{js,ts}"
+		],
+		"ignore": [
+			"node_modules/**/*",
+			"packages/**/node_modules/**/*",
+			"packages/**/dist/**/*",
+			"**/*.test.{js,ts}",
+			"**/*.log",
+			"**/*.spec.{js,ts}",
+			"**/**/tsconfig.json",
+			"**/*.d.ts",
+			"README.md",
+			"CHANGELOG.md",
+			"LICENSE",
+			"package-lock.json",
+			"yarn.lock"
+		]
+	},
+	"json": {
+		"formatter": {
+			"enabled": true,
+			"indentWidth": 2
+		}
+	}
+}

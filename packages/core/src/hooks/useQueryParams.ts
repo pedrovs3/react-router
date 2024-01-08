@@ -1,7 +1,7 @@
 import { useRouter } from "../context";
 
 export const useQueryParams = () => {
-  const {queryParams} = useRouter();
+	const { queryParams } = useRouter();
 
-  return queryParams;
-}
+	return queryParams;
+};

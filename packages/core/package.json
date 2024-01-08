@@ -15,8 +15,7 @@
     "README.md",
     "LICENSE",
     "package.json",
-    "CHANGELOG.md",
-    "banner_image.png"
+    "CHANGELOG.md"
   ],
   "keywords": [
     "react",

@@ -6,7 +6,7 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/pedrovs3/react-router?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/pedrovs3/react-router?style=for-the-badge)
 
-<img src="banner_image.png" alt="Exemplo imagem">
+<img src="https://logos-world.net/wp-content/uploads/2023/08/React-Symbol.png" alt="Exemplo imagem">
 
 > Esta é uma biblioteca de roteamento simples, leve e flexível para aplicações React. Ela fornece um conjunto de
 componentes e hooks para lidar com o roteamento em sua aplicação, incluindo suporte para rotas dinâmicas com parâmetros
@@ -175,8 +175,6 @@ const App = () => (
 ```
 > O router cuida de todo o resto, como, por exemplo, carregar o componente de forma assíncrona e passar os parâmetros da
 URL para o componente.
-
-Adicione comandos de execução e exemplos que você acha que os usuários acharão úteis. Fornece uma referência de opções para pontos de bônus!
 
 ## 📫 Contribuindo
 

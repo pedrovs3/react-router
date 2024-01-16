@@ -1,14 +1,20 @@
-# Como contribuir?
+# How to contribute
 
-Este é um projeto totalmente livre que aceita contribuições via pull requests no GitHub. Este documento tem a responsabilidade de alinhar as contribuições de acordo com os padrões estabelecidos no mesmo. Em caso de dúvidas, [abra uma issue](https://github.com/pedrovs3/react-router/issues/new).
+<details>
+    <summary>View in another language:</summary>
 
-## Passos
+[![pt-BR](https://img.shields.io/badge/lang-pt--br-blue.svg)](https://github.com/pedrovs3/react-router/blob/main/CONTRIBUTING-PT.md)
+</details>
 
-1. Crie um fork deste repositório.
-2. Envie seus commits em português ou inglês.
-3. Insira um pequeno resumo sobre o que foi adicionado.
-4. Solicite um pull request.
+This is a totally free project that accepts contributions via pull requests on GitHub. This document is responsible for aligning contributions according to the standards established in it. If you have any questions, [open an issue](https://github.com/pedrovs3/react-router/issues/new).
 
-## Recomendação
+## Steps
 
-Para uma melhor semântica nos commits, recomendamos que seja seguido o padrão sugerido no repositório do @iuricode sobre [padrões de commits](https://github.com/iuricode/padroes-de-commits). Assim ficará mais fácil para avaliar seu pull request.
+1. Fork this repository.
+2. Send your commits in Portuguese or English.
+3. Insert a small summary about what was added.
+4. Request a pull request.
+
+## Recommendation
+
+For a better semantic in the commits, we recommend that you follow the pattern suggested in the @iuricode repository on [commit patterns](https://github.com/iuricode/padroes-de-commits). This way it will be easier to evaluate your pull request.

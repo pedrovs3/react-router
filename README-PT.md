@@ -202,7 +202,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 
 <table>
   <tr>
-    <td>
+    <td style="text-align: center;">
       <a href="https://github.com/pedrovs3" title="Perfil do colaborador">
         <img src="https://avatars.githubusercontent.com/u/86010036" style="border-radius: 50%" width="100px;" alt="Foto do Pedro Vieira no GitHub"/><br>
         <sub>

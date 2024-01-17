@@ -33,6 +33,6 @@ jobs:
         with:
           working-directory: '/packages'
           token: ${{ secrets.GITHUB_TOKEN }}
-          eslint-args: '--ignore-path=.gitignore --quiet'
           extensions: 'js,jsx,ts,tsx'
           annotations: true
+          all-files: true

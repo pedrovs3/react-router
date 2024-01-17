@@ -23,5 +23,5 @@ jobs:
           version: latest
 
       - name: Run Biome
-        working-directory: ./packages
-        run: biome ci .
+        shell: bash
+        run: biome ci packages

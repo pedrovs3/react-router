@@ -1,18 +1,25 @@
 # @pedrovs3/react-router
 
 
+
+
+<div align="center">
 <details>
     <summary>View in another language:</summary>
 
 [![pt-BR](https://img.shields.io/badge/lang-pt--br-blue.svg)](https://github.com/pedrovs3/react-router/blob/main/README-PT.md)
 </details>
-
-
+    
 ![GitHub repo size](https://img.shields.io/github/repo-size/pedrovs3/react-router?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/pedrovs3/react-router?style=for-the-badge)
 ![GitHub forks](https://img.shields.io/github/forks/pedrovs3/react-router?style=for-the-badge)
 ![Github open issues](https://img.shields.io/github/issues/pedrovs3/react-router?style=for-the-badge)
 ![Github open pull requests](https://img.shields.io/github/issues-pr-raw/pedrovs3/react-router?style=for-the-badge)
+</div>
+<div align="center">
+    
+[![Code quality](https://github.com/pedrovs3/react-router/actions/workflows/code-quality.yaml/badge.svg)](https://github.com/pedrovs3/react-router/actions/workflows/code-quality.yaml)
+</div>
 
 <img src="https://logos-world.net/wp-content/uploads/2023/08/React-Symbol.png" alt="Exemplo imagem">
 

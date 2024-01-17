@@ -33,7 +33,7 @@ jobs:
         with:
           working-directory: '/packages'
           token: ${{ secrets.GITHUB_TOKEN }}
-          ignore-pattern: |
+          ignore-patterns: |
             dist/
             node_modules/
           extensions: 'js,jsx,ts,tsx'

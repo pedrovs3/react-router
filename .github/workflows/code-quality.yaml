@@ -1,32 +1,12 @@
-name: Code quality
-
-on:
-  push:
-    branches:
-      - main
-      - development
-  pull_request:
-    branches:
-      - main
-      - development
+name: Code Quality
+on: push
 
 jobs:
-  quality:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-
-      - uses: pnpm/action-setup@v2
-        name: Setup pnpm
-        with:
-          version: 8
-
-      - name: Setup NodeJs
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20
-          cache: 'pnpm'
-          cache-dependency-path: '**/pnpm-lock.yaml'
-
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm run lint
+      - uses: actions/checkout@v2
+      - name: Install modules
+        run: pnpm
+      - name: Run ESLint
+        run: eslint packages/ --ext .js,.jsx,.ts,.tsx

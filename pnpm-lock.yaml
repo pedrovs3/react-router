@@ -39,6 +39,9 @@ importers:
       '@typescript-eslint/parser':
         specifier: 6.19.0
         version: 6.19.0(eslint@8.56.0)(typescript@5.3.3)
+      airbnb:
+        specifier: ^0.0.2
+        version: 0.0.2
       eslint:
         specifier: 8.56.0
         version: 8.56.0
@@ -2680,6 +2683,13 @@ packages:
       debug: 4.3.4
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /airbnb@0.0.2:
+    resolution: {integrity: sha512-eC+7zzGrcM///BKt04V23v+W3b9dWDUltOzo0j5lzjhvvMc4EiSxh55k2vlVnHTZ0igqA8/i/1j2j+m7UlZ54w==}
+    hasBin: true
+    dependencies:
+      chalk: 2.4.2
     dev: true
 
   /ajv@6.12.6:

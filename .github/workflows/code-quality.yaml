@@ -28,5 +28,6 @@ jobs:
           cache: 'pnpm'
           cache-dependency-path: '**/pnpm-lock.yaml'
 
+      - run: pnpm i --frozen-lockfile
       - name: Run ESLint
         run: eslint packages/ --ext .js,.jsx,.ts,.tsx

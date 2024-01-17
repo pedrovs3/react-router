@@ -1,7 +1,7 @@
-import { useRouter } from "../context";
+import { useRouter } from '../context';
 
 export const usePath = () => {
-	const { path } = useRouter();
+  const { path } = useRouter();
 
-	return path;
+  return path;
 };

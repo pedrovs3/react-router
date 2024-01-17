@@ -1,3 +1,3 @@
-export * from "./getQueryParams";
-export * from "./getPathParams";
-export * from "./matchPath";
+export * from './getQueryParams';
+export * from './getPathParams';
+export * from './matchPath';

@@ -1,0 +1,32 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+        "airbnb",
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
+        "airbnb-typescript/base"
+    ],
+    "parserOptions": {
+        "project": "./packages/*/tsconfig.json",
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "import/export": "off",
+        "import/extensions": "off",
+        "react/react-in-jsx-scope": "off",
+        "react/function-component-definition": "off",
+        "import/prefer-default-export": "off",
+        "react/jsx-filename-extension": "off",
+        "react/jsx-no-constructed-context-values": "off",
+        "react/require-default-props": "off"
+    },
+    "ignorePatterns": ["**/dist/*", "**/node_modules/*", "**/*.test.ts", "**/*.test.tsx"]
+}

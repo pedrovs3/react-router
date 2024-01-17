@@ -1,25 +1,25 @@
-import { useRouter } from "../context";
+import { useRouter } from '../context';
 
 export const useNavigate = () => {
-	const { setLocation, setNavigationData } = useRouter();
+  const { setLocation, setNavigationData } = useRouter();
 
-	const navigate = (path: string, data?: object) => {
-		window.history.pushState(null, "", path);
-		setLocation(path);
-		setNavigationData(data ?? {});
-	};
+  const navigate = (path: string, data?: object) => {
+    window.history.pushState(null, '', path);
+    setLocation(path);
+    setNavigationData(data ?? {});
+  };
 
-	const goBack = () => {
-		window.history.back();
-	};
+  const goBack = () => {
+    window.history.back();
+  };
 
-	const goForward = () => {
-		window.history.forward();
-	};
+  const goForward = () => {
+    window.history.forward();
+  };
 
-	return {
-		navigate,
-		goBack,
-		goForward,
-	};
+  return {
+    navigate,
+    goBack,
+    goForward,
+  };
 };

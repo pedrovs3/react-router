@@ -9,25 +9,26 @@
 <img src="https://logos-world.net/wp-content/uploads/2023/08/React-Symbol.png" alt="Exemplo imagem">
 
 > Esta é uma biblioteca de roteamento simples, leve e flexível para aplicações React. Ela fornece um conjunto de
-componentes e hooks para lidar com o roteamento em sua aplicação, incluindo suporte para rotas dinâmicas com parâmetros
-na URL.
+> componentes e hooks para lidar com o roteamento em sua aplicação, incluindo suporte para rotas dinâmicas com parâmetros
+> na URL.
 
 ## 📝 Índice
 
 <!-- TOC -->
-* [@pedrovs3/react-router](#pedrovs3react-router)
-  * [📝 Índice](#-índice)
-  * [Sobre o projeto](#sobre-o-projeto)
-    * [Funcionalidades e recursos](#funcionalidades-e-recursos)
-    * [Ajustes e melhorias](#ajustes-e-melhorias)
-  * [💻 Pré-requisitos](#-pré-requisitos)
-  * [🚀 Instalando @pedrovs3/react-router](#-instalando-pedrovs3react-router)
-  * [☕ Usando @pedrovs3/react-router](#-usando-pedrovs3react-router)
-  * [📫 Contribuindo](#-contribuindo)
-  * [🤝 Colaboradores](#-colaboradores)
-  * [😄 Seja um dos contribuidores](#-seja-um-dos-contribuidores)
-  * [📝 Licença](#-licença)
-<!-- TOC -->
+
+- [@pedrovs3/react-router](#pedrovs3react-router)
+  - [📝 Índice](#-índice)
+  - [Sobre o projeto](#sobre-o-projeto)
+    - [Funcionalidades e recursos](#funcionalidades-e-recursos)
+    - [Ajustes e melhorias](#ajustes-e-melhorias)
+  - [💻 Pré-requisitos](#-pré-requisitos)
+  - [🚀 Instalando @pedrovs3/react-router](#-instalando-pedrovs3react-router)
+  - [☕ Usando @pedrovs3/react-router](#-usando-pedrovs3react-router)
+  - [📫 Contribuindo](#-contribuindo)
+  - [🤝 Colaboradores](#-colaboradores)
+  - [😄 Seja um dos contribuidores](#-seja-um-dos-contribuidores)
+  - [📝 Licença](#-licença)
+  <!-- TOC -->
 
 ## Sobre o projeto
 
@@ -35,13 +36,12 @@ Essa biblioteca foi criada para aprender mais sobre o funcionamento de um Router
 biblioteca para React. Ela foi inspirada no React Router e no React Router Dom, porém, possui uma API mais simples e
 flexível. Além disso, ela é mais leve e não possui dependencias externas.
 
-
 ### Funcionalidades e recursos
 
 - [x] **API Simples**: Basta envolver a sua aplicação com o componente `Router` e usar o componente `Route` para definir as suas
-  rotas.
+      rotas.
 - [x] **Rotas Dinâmicas**: Defina facilmente rotas com parâmetros de caminho, como "/user/:id". O componente `Route`
-  extrairá automaticamente esses parâmetros e os passará para o seu componente.
+      extrairá automaticamente esses parâmetros e os passará para o seu componente.
 - [x] **Query Params**: Acesse os query params de seus componentes com o hook `useRouterContext`.
 - [x] **Página 404**: Defina uma página 404 personalizada que será exibida quando nenhuma rota corresponder.
 - [x] **Guarded routes**: Defina rotas que só podem ser acessadas se o usuário estiver autenticado.
@@ -135,7 +135,7 @@ const App = () => (
 ```
 
 > Neste exemplo, `Home`, `About` e `User` são seus componentes. O componente `User` receberá uma prop `pathParams` com
-o ‘id’ da URL.
+> o ‘id’ da URL.
 
 **4.** Utilizando lazy loading:
 
@@ -173,8 +173,9 @@ const App = () => (
   </Router>
 );
 ```
+
 > O router cuida de todo o resto, como, por exemplo, carregar o componente de forma assíncrona e passar os parâmetros da
-URL para o componente.
+> URL para o componente.
 
 ## 📫 Contribuindo
 
@@ -212,4 +213,3 @@ Quer fazer parte desse projeto? Clique [AQUI](https://github.com/pedrovs3/react-
 ## 📝 Licença
 
 Esse projeto está sob licença MIT. Veja o arquivo [LICENÇA](https://github.com/pedrovs3/react-router/blob/main/LICENSE) para mais detalhes.
-

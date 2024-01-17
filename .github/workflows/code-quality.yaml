@@ -31,7 +31,7 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - uses: sibiraj-s/action-eslint@v3
         with:
-          working-directory: './'
+          working-directory: '/packages'
           token: ${{ secrets.GITHUB_TOKEN }}
           eslint-args: '--ignore-path=.gitignore --quiet'
           extensions: 'js,jsx,ts,tsx'

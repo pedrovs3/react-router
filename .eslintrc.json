@@ -6,7 +6,6 @@
     "parser": "@typescript-eslint/parser",
     "extends": [
         "plugin:react/recommended",
-        "plugin:react-hooks/recommended",
         "airbnb-typescript/base"
     ],
     "parserOptions": {
@@ -25,7 +24,8 @@
         "import/prefer-default-export": "off",
         "react/jsx-filename-extension": "off",
         "react/jsx-no-constructed-context-values": "off",
-        "react/require-default-props": "off"
+        "react/require-default-props": "off",
+        "import/no-extraneous-dependencies": "off"
     },
     "ignorePatterns": ["**/dist/*", "**/node_modules/*", "**/*.test.ts", "**/*.test.tsx"]
 }

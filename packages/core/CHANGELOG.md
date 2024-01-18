@@ -1,5 +1,12 @@
 # @pedrovs3/react-router
 
+## 1.4.8
+
+### Patch Changes
+
+- stable auth version
+- add logout function
+
 ## 1.4.7
 
 ### Patch Changes

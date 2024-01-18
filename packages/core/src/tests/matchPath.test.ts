@@ -30,7 +30,7 @@ describe('matchPath', () => {
     expect(matchPath(currentPath, pathOrigin)).toBe(false);
   });
 
-  it('should return params if the path is "*" ', () => {
+  it('should return params if the path is "*"', () => {
     const currentPath = '/foo/bar';
     const pathOrigin = '*';
 

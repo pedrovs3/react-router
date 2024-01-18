@@ -3,6 +3,7 @@ import { getPathParams } from '../helpers';
 import { usePath, useQueryParams } from '../hooks';
 import { Redirect } from './Redirect';
 import { NotFound } from './pages';
+import { useAuthContext } from '../context';
 
 interface RouteProps {
   path: string;
@@ -10,6 +11,7 @@ interface RouteProps {
   metadata?: IMetaData;
   middleware?: () => boolean;
   redirectTo?: string;
+  needsAuth?: boolean;
 }
 
 type RouteComponent =
@@ -42,11 +44,17 @@ export const Route: React.FC<RouteProps> = ({
         .querySelector('meta[name="description"]')
         ?.getAttribute('content') || 'React App',
   },
+  needsAuth,
 }) => {
   const currentPath = usePath();
   const queryParams = useQueryParams();
   const pathParams = getPathParams(path, currentPath);
   const isMatch = path === '*' ? true : pathParams !== null;
+
+  if (needsAuth && path !== '/login') {
+    const { token } = useAuthContext();
+    if (!token) return <Redirect to={redirectTo || '/login'} />;
+  }
 
   React.useMemo(() => {
     if (metadata) {
@@ -57,7 +65,8 @@ export const Route: React.FC<RouteProps> = ({
     }
   }, [metadata]);
 
-  if (middleware && !middleware()) return <Redirect to={redirectTo || '/login'} />;
+  if (middleware && !middleware())
+    return <Redirect to={redirectTo || '/login'} />;
 
   if (!isMatch) return null;
 

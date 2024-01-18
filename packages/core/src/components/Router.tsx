@@ -1,5 +1,5 @@
 import React from 'react';
-import { RouterContextProvider } from '../context';
+import { AuthContextProvider, RouterContextProvider } from '../context';
 import { Switch } from './Switch';
 
 interface RouterProps {
@@ -8,6 +8,8 @@ interface RouterProps {
 
 export const Router: React.FC<RouterProps> = ({ children }) => (
   <RouterContextProvider>
-    <Switch>{children}</Switch>
+    <AuthContextProvider>
+      <Switch>{children}</Switch>
+    </AuthContextProvider>
   </RouterContextProvider>
 );

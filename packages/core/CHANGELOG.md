@@ -1,5 +1,11 @@
 # @pedrovs3/react-router
 
+## 1.4.7
+
+### Patch Changes
+
+- add auth via context to protect route using a token
+
 ## 1.4.6
 
 ### Patch Changes

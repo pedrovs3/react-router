@@ -216,11 +216,11 @@ We thank the following developers who contributed:
 ## 😄 Be one of the contributors
 
 Want to be part of this project?
-Click [HERE](https://github.com/pedrovs3/react-router/blob/feat/auth-routes/CONTRIBUTING.md) and read how to contribute.
+Click [HERE](https://github.com/pedrovs3/react-router/blob/main/CONTRIBUTING.md) and read how to contribute.
 
 ## 📝 License
 
-This project is under license. See the [LICENSE](https://github.com/pedrovs3/react-router/blob/feat/auth-routes/LICENSE)
+This project is under license. See the [LICENSE](https://github.com/pedrovs3/react-router/blob/main/LICENSE)
 file for more details.
 
 [⬆ Back to top](#pedrovs3react-router)<br>

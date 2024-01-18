@@ -2,18 +2,15 @@ export const matchPath = (currentPath: string, pathOrigin: string) => {
   const currentPathArray = currentPath.split('?')[0].split('/');
   const pathOriginArray = pathOrigin.split('/');
 
-  if (currentPathArray.length !== pathOriginArray.length) {
+  if (currentPathArray.length !== pathOriginArray.length && !pathOriginArray.includes('*')) {
     return false;
   }
 
   const params: { [key: string]: string } = {};
 
   const match = pathOriginArray.every((path, index) => {
-    if (path === '*') {
-      return true;
-    }
 
-    if (path === '**') {
+    if (path === '*') {
       return true;
     }
 

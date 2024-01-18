@@ -1,5 +1,15 @@
 # @pedrovs3/react-router
 
+## 1.4.9
+
+### Patch Changes
+
+- fix: handle not found page
+
+> Now path: "*" are will be used to handle custom not found page
+
+- fix: overflow on default not found page
+
 ## 1.4.8
 
 ### Patch Changes

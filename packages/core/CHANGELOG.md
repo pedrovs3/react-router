@@ -5,6 +5,10 @@
 ### Patch Changes
 
 - add auth via context to protect route using a token
+- this modify continues under development and tests,
+- > **For now, this is not recommended for production**
+
+> Stable version will be released soon, temporarily use the version 1.4.6
 
 ## 1.4.6
 

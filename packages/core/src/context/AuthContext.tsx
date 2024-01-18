@@ -32,7 +32,12 @@ export const useAuthContext = () => {
   };
 
   const addTokenToCookie = (token: string) => {
-    document.cookie = `token=${token}`;
+    document.cookie = `token=${token};`;
+  };
+
+  const removeTokenFromCookie = () => {
+    const cookiesWithoutToken = document.cookie.split('; ').filter((row) => !row.startsWith('token='));
+    document.cookie = cookiesWithoutToken.join('; ');
   };
 
   React.useEffect(() => {
@@ -43,5 +48,5 @@ export const useAuthContext = () => {
     }
   }, [document.cookie]);
 
-  return { token, addTokenToCookie };
+  return { token, addTokenToCookie, removeTokenFromCookie };
 };

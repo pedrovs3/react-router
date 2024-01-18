@@ -1,10 +1,11 @@
 import { useAuthContext } from '../context';
 
 export const useAuth = () => {
-  const { addTokenToCookie, token } = useAuthContext();
+  const { addTokenToCookie, token, removeTokenFromCookie } = useAuthContext();
 
   return {
-    addTokenToCookie,
+    login: addTokenToCookie,
+    logout: removeTokenFromCookie,
     token,
   };
 };

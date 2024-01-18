@@ -1,80 +1,89 @@
 # @pedrovs3/react-router
 
+<div align="center">
+
 ![GitHub repo size](https://img.shields.io/github/repo-size/pedrovs3/react-router?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/pedrovs3/react-router?style=for-the-badge)
 ![GitHub forks](https://img.shields.io/github/forks/pedrovs3/react-router?style=for-the-badge)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues/pedrovs3/react-router?style=for-the-badge)
-![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/pedrovs3/react-router?style=for-the-badge)
+![Github open issues](https://img.shields.io/github/issues/pedrovs3/react-router?style=for-the-badge)
+![Github open pull requests](https://img.shields.io/github/issues-pr-raw/pedrovs3/react-router?style=for-the-badge)
+</div>
+<div align="center">
+
+[![Code quality](https://github.com/pedrovs3/react-router/actions/workflows/code-quality.yaml/badge.svg)](https://github.com/pedrovs3/react-router/actions/workflows/code-quality.yaml)
+</div>
 
 <img src="https://logos-world.net/wp-content/uploads/2023/08/React-Symbol.png" alt="Exemplo imagem">
 
-> Esta é uma biblioteca de roteamento simples, leve e flexível para aplicações React. Ela fornece um conjunto de
-> componentes e hooks para lidar com o roteamento em sua aplicação, incluindo suporte para rotas dinâmicas com parâmetros
-> na URL.
+> This is a simple, lightweight, and flexible routing library for React applications. It provides a set of components
+> and hooks to handle routing in your application, including support for dynamic routes with parameters in the URL.
 
-## 📝 Índice
+## 📝 Summary
 
 <!-- TOC -->
 
-- [@pedrovs3/react-router](#pedrovs3react-router)
-  - [📝 Índice](#-índice)
-  - [Sobre o projeto](#sobre-o-projeto)
-    - [Funcionalidades e recursos](#funcionalidades-e-recursos)
-    - [Ajustes e melhorias](#ajustes-e-melhorias)
-  - [💻 Pré-requisitos](#-pré-requisitos)
-  - [🚀 Instalando @pedrovs3/react-router](#-instalando-pedrovs3react-router)
-  - [☕ Usando @pedrovs3/react-router](#-usando-pedrovs3react-router)
-  - [📫 Contribuindo](#-contribuindo)
-  - [🤝 Colaboradores](#-colaboradores)
-  - [😄 Seja um dos contribuidores](#-seja-um-dos-contribuidores)
-  - [📝 Licença](#-licença)
-  <!-- TOC -->
+* [@pedrovs3/react-router](#pedrovs3react-router)
+    * [📝 Summary](#-summary)
+    * [About the project](#about-the-project)
+        * [Features and resources](#features-and-resources)
+        * [Adjustments and improvements](#adjustments-and-improvements)
+    * [💻 Prerequisites](#-prerequisites)
+    * [🚀 Installing @pedrovs3/react-router](#-installing-pedrovs3react-router)
+    * [☕ Using @pedrovs3/react-router](#-using-pedrovs3react-router)
+    * [📫 Contributing](#-contributing)
+    * [🤝 Collaborators](#-collaborators)
+    * [😄 Be one of the contributors](#-be-one-of-the-contributors)
+    * [📝 License](#-license)
 
-## Sobre o projeto
+<!-- TOC -->
 
-Essa biblioteca foi criada para aprender mais sobre o funcionamento de um Router para React e como criar uma
-biblioteca para React. Ela foi inspirada no React Router e no React Router Dom, porém, possui uma API mais simples e
-flexível. Além disso, ela é mais leve e não possui dependencias externas.
+## About the project
 
-### Funcionalidades e recursos
+This library was created to learn more about how a Router for React works and how to create a library for React. It was
+inspired by React Router and React Router Dom, however, it has a simpler and more flexible API. In addition, it is
+lighter and has no external dependencies.
 
-- [x] **API Simples**: Basta envolver a sua aplicação com o componente `Router` e usar o componente `Route` para definir as suas
-      rotas.
-- [x] **Rotas Dinâmicas**: Defina facilmente rotas com parâmetros de caminho, como "/user/:id". O componente `Route`
-      extrairá automaticamente esses parâmetros e os passará para o seu componente.
-- [x] **Query Params**: Acesse os query params de seus componentes com o hook `useRouterContext`.
-- [x] **Página 404**: Defina uma página 404 personalizada que será exibida quando nenhuma rota corresponder.
-- [x] **Guarded routes**: Defina rotas que só podem ser acessadas se o usuário estiver autenticado.
-- [x] **Hooks**: Possui hooks para acessar o histórico de navegação e o contexto do roteador.
-- [x] **Metadata**: Defina metadados para suas rotas, como, por exemplo, título da página e descrição para melhorar o `SEO`.
-- [x] **Lazy loading**: Suporte para carregamento assíncrono de componentes.
-- [x] **Suporte ao TypeScript**: Todos os componentes e hooks são totalmente tipados.
-- [x] **Documentação**: Documentação completa com exemplos de uso.
-- [x] **Testes**: Testes unitários e de integração.
-- [x] **Tamanho**: Tamanho menor do que outras libs.
-- [x] **Sem dependências**: Não possui dependências externas.
-- [x] **Compatibilidade**: Compatível com React 16.8.0 ou superior.
+### Features and resources
 
-### Ajustes e melhorias
+- [x] **Simple API**: Just wrap your application with the `Router` component and use the `Route` component to define
+  your
+  routes.
+- [x] **Dynamic routes**: Easily define routes with path parameters, such as "/user/:id". The `Route` component will
+  automatically extract these parameters and pass them to your component.
+- [x] **Query Params**: Access the query params of your components with the `useRouterContext` hook.
+- [x] **404 page**: Define a custom 404 page that will be displayed when no route matches.
+- [x] **Guarded routes**: Define routes that can only be accessed if the user is authenticated.
+- [x] **Hooks**: It has hooks to access the navigation history and the router context.
+- [x] **Metadata**: Define metadata for your routes, such as page title and description to improve `SEO`.
+- [x] **Lazy loading**: Support for asynchronous loading of components.
+- [x] **TypeScript support**: All components and hooks are fully typed.
+- [x] **Documentation**: Complete documentation with usage examples.
+- [x] **Lightweight**: No external dependencies.
+- [x] **Flexible**: You can use it with any React project, such as Next.js, Gatsby, etc.
+- [x] **Tested**: All components and hooks are tested with Jest and React Testing Library.
+- [x] **No external dependencies**: No external dependencies.
 
-O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
+### Adjustments and improvements
 
-- [x] Otimização do código
-- [x] Melhorar a documentação
-- [ ] Adicionar mais exemplos de uso
-- [ ] Testar implementação com Next.js
+The project is still under development and future updates will focus on the following tasks:
 
-## 💻 Pré-requisitos
+- [x] Add support for nested routes.
+- [x] Add support for guarded routes.
+- [ ] Add support for route transitions.
+- [ ] Add support for route prefetching.
+- [ ] Add support for route preloading.
 
-Antes de começar, verifique se você atendeu aos seguintes requisitos:
+## 💻 Prerequisites
 
-- Você instalou a versão mais recente de `<Node / npm / yarn>`
-- Você tem uma máquina `<Windows / Linux / Mac>`.
-- Você criou um projeto React com `<create-react-app / Vite>`.
+Before starting, make sure you have met the following requirements:
 
-## 🚀 Instalando @pedrovs3/react-router
+- You have installed the latest version of `Node.js` and `npm` or `yarn` or `pnpm`.
+- You have a `<Windows / Linux / Mac>` machine.
+- You have created a React project with `<create-react-app / Vite>`.
 
-Para instalar o react-router, siga estas etapas:
+## 🚀 Installing @pedrovs3/react-router
+
+To install @pedrovs3/react-router, follow these steps:
 
 **NPM**:
 
@@ -94,17 +103,17 @@ yarn add @pedrovs3/react-router
 pnpm add @pedrovs3/react-router
 ```
 
-## ☕ Usando @pedrovs3/react-router
+## ☕ Using @pedrovs3/react-router
 
-Para usar o router no seu projeto, siga estas etapas:
+To use the router in your project, follow these steps:
 
-**1.** Importe o componente `Router` e o componente `Route`:
+**1.** Import the `Router` component and the `Route` component:
 
 ```typescriptreact
 import { Router, Route } from '@pedrovs3/react-router';
 ```
 
-**2.** Envolva a sua aplicação com o componente `Router`:
+**2.** Wrap your application with the `Router` component:
 
 ```typescriptreact
 import { Router } from '@pedrovs3/react-router';
@@ -118,7 +127,7 @@ const App = () => (
 );
 ```
 
-**3.** Defina as suas rotas com o componente `Route`:
+**3.** Define your routes with the `Route` component:
 
 ```typescriptreact
 import { Router, Route } from '@pedrovs3/react-router';
@@ -134,19 +143,18 @@ const App = () => (
 );
 ```
 
-> Neste exemplo, `Home`, `About` e `User` são seus componentes. O componente `User` receberá uma prop `pathParams` com
-> o ‘id’ da URL.
+> In the example above, the `Home` component will be rendered when the user accesses the `/home` route, the `About`
 
-**4.** Utilizando lazy loading:
+**4.** Using lazy loading:
 
-**4.1** Importe `lazy` do React:
+**4.1** Import the `lazy` function from React:
 
 ```typescriptreact
 import { Router, Route } from '@pedrovs3/react-router';
 import { lazy } from 'react';
 ```
 
-**4.2** Importe o componente que você deseja carregar de forma assíncrona:
+**4.2** Import the component you want to load asynchronously:
 
 ```typescriptreact
 import { Router, Route } from '@pedrovs3/react-router';
@@ -156,7 +164,7 @@ import { lazy } from 'react';
 const About = lazy(() => import('./About'));
 ```
 
-**4.3** Por fim, passe o componente importado para o componente `Route`:
+**4.3** Finally, pass the imported component to the `Route` component:
 
 ```typescriptreact
 import { Router, Route } from '@pedrovs3/react-router';
@@ -174,28 +182,27 @@ const App = () => (
 );
 ```
 
-> O router cuida de todo o resto, como, por exemplo, carregar o componente de forma assíncrona e passar os parâmetros da
-> URL para o componente.
+> Router takes care of loading the component asynchronously and rendering it when the user accesses the route.
 
-## 📫 Contribuindo
+## 📫 Contributing
 
-Para contribuir com o projeto, siga estas etapas:
+To contribute to @pedrovs3/react-router, follow these steps:
 
-1. Bifurque este repositório.
-2. Crie um branch: `git checkout -b <nome_branch>`.
-3. Faça as suas alterações e confirme-as: `git commit -m '<mensagem_commit>'`
-4. Envie para o branch original: `git push origin <nome_do_projeto> / <local>`
-5. Crie a solicitação de pull.
+1. Fork this repository.
+2. Create a branch: `git checkout -b <branch_name>`.
+3. Make your changes and confirm them: `git commit -m '<commit_message>'`
+4. Send to the original branch: `git push origin <project_name> / <local>`
 
-Como alternativa, consulte a documentação do GitHub em [como criar uma solicitação pull](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+Alternatively, consult the GitHub documentation
+on [how to create a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
-## 🤝 Colaboradores
+## 🤝 Collaborators
 
-Agradecemos às seguintes pessoas que contribuíram para este projeto:
+We thank the following developers who contributed:
 
 <table>
   <tr>
-    <td align="center">
+    <td style="text-align: center;">
       <a href="https://github.com/pedrovs3" title="Perfil do colaborador">
         <img src="https://avatars.githubusercontent.com/u/86010036" style="border-radius: 50%" width="100px;" alt="Foto do Pedro Vieira no GitHub"/><br>
         <sub>
@@ -206,10 +213,14 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
   </tr>
 </table>
 
-## 😄 Seja um dos contribuidores
+## 😄 Be one of the contributors
 
-Quer fazer parte desse projeto? Clique [AQUI](https://github.com/pedrovs3/react-router/blob/main/CONTRIBUTING.md) e leia como contribuir.
+Want to be part of this project?
+Click [HERE](https://github.com/pedrovs3/react-router/blob/feat/auth-routes/CONTRIBUTING.md) and read how to contribute.
 
-## 📝 Licença
+## 📝 License
 
-Esse projeto está sob licença MIT. Veja o arquivo [LICENÇA](https://github.com/pedrovs3/react-router/blob/main/LICENSE) para mais detalhes.
+This project is under license. See the [LICENSE](https://github.com/pedrovs3/react-router/blob/feat/auth-routes/LICENSE)
+file for more details.
+
+[⬆ Back to top](#pedrovs3react-router)<br>

@@ -25,7 +25,8 @@
         "react/jsx-filename-extension": "off",
         "react/jsx-no-constructed-context-values": "off",
         "react/require-default-props": "off",
-        "import/no-extraneous-dependencies": "off"
+        "import/no-extraneous-dependencies": "off",
+        "@typescript-eslint/no-shadow": "off"
     },
     "ignorePatterns": ["**/dist/*", "**/node_modules/*", "**/*.test.ts", "**/*.test.tsx"]
 }

@@ -53,9 +53,8 @@ export const RouterContextProvider: React.FC<RouterContextProviderProps> = ({
 export const useRouter = () => {
   const context = React.useContext(RouterContext);
 
-  const {
-    path, setLocation, queryParams, navigationData, setNavigationData,
-  } = context ?? {};
+  const { path, setLocation, queryParams, navigationData, setNavigationData } =
+    context ?? {};
 
   return {
     path,
